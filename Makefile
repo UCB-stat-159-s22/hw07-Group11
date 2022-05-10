@@ -11,7 +11,7 @@ env :
     
 .PHONY : hw7_tools
 hw7_tools :
-	cd hw7_tools; pip install .
+	pip install .
 
 
 .PHONY : clean
