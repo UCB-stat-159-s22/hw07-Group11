@@ -5,7 +5,7 @@ import seaborn as sns
 from pathlib import Path
 
 
-OUTPUT = Path.home()/ "hw" / "hw07-hw07-group11" / "output"
+OUTPUT = Path.home()/ "HW" / "hw07-hw07-group11" / "output"
 
 def plot_default_in_category_group(group_name, df, x_label):
     """Add docstrings"""

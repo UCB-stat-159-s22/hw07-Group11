@@ -7,10 +7,10 @@ from pathlib import Path
 
 import hw7_tools.plot_tools as pt
 
-DATA = Path.home()/ "hw" / "hw07-hw07-group11" / "data" / "application_data.csv"
+DATA = Path.home()/ "HW" / "hw07-hw07-group11" / "data" / "application_data.csv"
 print(DATA)
 
-OUTPUT = Path.home()/ "hw" / "hw07-hw07-group11" / "output"
+OUTPUT = Path.home()/ "HW" / "hw07-hw07-group11" / "output"
 
 df = pd.read_csv(str(DATA))
 
