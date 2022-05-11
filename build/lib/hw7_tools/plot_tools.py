@@ -57,3 +57,27 @@ def plot_default_in_numerical_discrete_group(group_name, df, x_label):
     ax2.set_title('Default Proportion vs '+ x_label)
     f.tight_layout()
     plt.savefig(str(OUTPUT) + "/" + x_label + ".png")
+	
+def balanced_plot(gender_df):
+    order = ['VERY LOW','LOW','MEDIUM','HIGH','VERY HIGH']
+    df_one = gender_df[gender_df['TARGET']==1]
+    
+    total_f = len(gender_df[gender_df['CODE_GENDER']=='F'])
+    total_m = len(gender_df['CODE_GENDER'])-total_f
+    
+    grouped_df = df_one.groupby(['AMT_INCOME_Quantile','CODE_GENDER']).count()[['REG_CITY_NOT_LIVE_CITY']].rename(columns={
+        "REG_CITY_NOT_LIVE_CITY": "count"}).reset_index()
+    
+    accounted_for_imbalance = [None] * 10
+    for i in range(10):
+        ct = grouped_df['count']
+        if((i+1)%2 != 0):
+            accounted_for_imbalance[i] = ct[i]/total_f
+        else:
+            accounted_for_imbalance[i] = ct[i]/total_m                                      
+    grouped_df['balanced_count']=accounted_for_imbalance
+    
+    f, ax = plt.subplots(1,figsize=(12,6))
+    sns.barplot(ax = ax,data = grouped_df,x = 'AMT_INCOME_Quantile',y='balanced_count',hue= 'CODE_GENDER')
+    ax.set_xlabel("Income Quantile")
+    ax.set_title("Default Proportions(Imbalance Accounted) of F/M in Different Income Groups");
