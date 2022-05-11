@@ -12,7 +12,7 @@ In our studies, we will take a look at credit risk and how default status varies
 ## License
 The project is released under the BSD 3-clause License.
 
-### Some helpful commands:
+## Some helpful commands:
 
 Install the packages:
 ``pip install .`` *or* ``make hw7_tools``
@@ -29,7 +29,7 @@ Execute and generate outputs:
 Clean outputs:
 ``make clean``
 
-### Some helpful tips:
+## Some helpful tips:
 
 After ``make clean``, rerun details.ipynb or ``make all`` to regenerate the data and outputs needed for main.ipynb
 
