@@ -3,14 +3,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
-
+import os
 
 import hw7_tools.plot_tools as pt
 
-DATA = Path.home()/ "hw" / "hw07-hw07-group11" / "data" / "application_data.csv"
+DATA = os.getcwd() + "/data/application_data.csv"
 print(DATA)
 
-OUTPUT = Path.home()/ "hw" / "hw07-hw07-group11" / "output"
+OUTPUT = os.getcwd() + "/output"
 
 df = pd.read_csv(str(DATA))
 
