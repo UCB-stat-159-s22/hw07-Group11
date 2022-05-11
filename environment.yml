@@ -13,3 +13,5 @@ dependencies:
   - seaborn 0.11
   - scikit-learn 1.0
   - ipykernel=4.8
+  - pyarrow 4.0
+  
