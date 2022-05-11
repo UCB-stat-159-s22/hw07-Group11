@@ -184,3 +184,11 @@ def logistic_reg(processed, threshold=0.5):
     print(f'train_recall = {recall} vs test_recall = {test_recall}')
     coefficients = pd.DataFrame({'feature': balanced_train_x.columns, 'coeff': model.coef_[0]}, columns=['feature', 'coeff'])
     return coefficients
+
+def feature_plot(features,df):
+    plt.figure(figsize = (20, 15), dpi=300)
+    for i in enumerate(features):
+        plt.subplot(3, 2, i[0]+1)
+        sns.boxplot(x = i[1], data = df)
+    plt.savefig("output/feature_plot.png")
+    plt.show()
