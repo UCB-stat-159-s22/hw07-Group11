@@ -1,0 +1,1139 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Account Default Status and Characteristics &#8212; Homework 7 Book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to HW 7" href="README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Homework 7 Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   Welcome to HW 7
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Credit Account Default Status and Characteristics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/main.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmain.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/main.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-cleaning">
+   Data Cleaning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eda">
+   EDA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-intuition">
+     Data Intuition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#target">
+     Target
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ratio-of-default-vs-non-default-for-different-groups">
+   Ratio of Default vs Non-Default for different groups
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gender">
+     Gender
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gender-and-income">
+       Gender and Income
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loan-type">
+     Loan Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#income-type">
+     Income Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#education-type">
+     Education Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#house-ownership">
+     House Ownership
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#house-type">
+     House Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-surrounding-30dpd-defaults">
+     Number of Surrounding 30DPD Defaults
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-family-members">
+     Number of Family Members
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-takeaways">
+       Data Takeaways
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logistic-regression-model">
+   Logistic Regression Model
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-processing">
+     Data Processing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#results">
+     Results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors-contribution">
+   Authors Contribution
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Credit Account Default Status and Characteristics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-cleaning">
+   Data Cleaning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eda">
+   EDA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-intuition">
+     Data Intuition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#target">
+     Target
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ratio-of-default-vs-non-default-for-different-groups">
+   Ratio of Default vs Non-Default for different groups
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gender">
+     Gender
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gender-and-income">
+       Gender and Income
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loan-type">
+     Loan Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#income-type">
+     Income Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#education-type">
+     Education Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#house-ownership">
+     House Ownership
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#house-type">
+     House Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-surrounding-30dpd-defaults">
+     Number of Surrounding 30DPD Defaults
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-family-members">
+     Number of Family Members
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-takeaways">
+       Data Takeaways
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logistic-regression-model">
+   Logistic Regression Model
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-processing">
+     Data Processing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#results">
+     Results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors-contribution">
+   Authors Contribution
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="credit-account-default-status-and-characteristics">
+<h1>Credit Account Default Status and Characteristics<a class="headerlink" href="#credit-account-default-status-and-characteristics" title="Permalink to this headline">¶</a></h1>
+<p>Data source: <a class="reference external" href="https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=application_data.csv">https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=application_data.csv</a> (select all columns when downloading)</p>
+<p>Detailed data and columns description and also be found using this link, under Data and Data Explorer-columns_description.csv</p>
+<p>Credit history matters a lot when individuals want to take out loans … say more about this later</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+
+<span class="kn">import</span> <span class="nn">hw7_tools.plot_tools</span> <span class="k">as</span> <span class="nn">pt</span>
+<span class="kn">import</span> <span class="nn">hw7_tools.logistic_reg</span> <span class="k">as</span> <span class="nn">logistic</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/application_data.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SK_ID_CURR</th>
+      <th>TARGET</th>
+      <th>NAME_CONTRACT_TYPE</th>
+      <th>CODE_GENDER</th>
+      <th>FLAG_OWN_CAR</th>
+      <th>FLAG_OWN_REALTY</th>
+      <th>CNT_CHILDREN</th>
+      <th>AMT_INCOME_TOTAL</th>
+      <th>AMT_CREDIT</th>
+      <th>AMT_ANNUITY</th>
+      <th>...</th>
+      <th>FLAG_DOCUMENT_18</th>
+      <th>FLAG_DOCUMENT_19</th>
+      <th>FLAG_DOCUMENT_20</th>
+      <th>FLAG_DOCUMENT_21</th>
+      <th>AMT_REQ_CREDIT_BUREAU_HOUR</th>
+      <th>AMT_REQ_CREDIT_BUREAU_DAY</th>
+      <th>AMT_REQ_CREDIT_BUREAU_WEEK</th>
+      <th>AMT_REQ_CREDIT_BUREAU_MON</th>
+      <th>AMT_REQ_CREDIT_BUREAU_QRT</th>
+      <th>AMT_REQ_CREDIT_BUREAU_YEAR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100002</td>
+      <td>1</td>
+      <td>Cash loans</td>
+      <td>M</td>
+      <td>N</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>202500.0</td>
+      <td>406597.5</td>
+      <td>24700.5</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100003</td>
+      <td>0</td>
+      <td>Cash loans</td>
+      <td>F</td>
+      <td>N</td>
+      <td>N</td>
+      <td>0</td>
+      <td>270000.0</td>
+      <td>1293502.5</td>
+      <td>35698.5</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100004</td>
+      <td>0</td>
+      <td>Revolving loans</td>
+      <td>M</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>67500.0</td>
+      <td>135000.0</td>
+      <td>6750.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100006</td>
+      <td>0</td>
+      <td>Cash loans</td>
+      <td>F</td>
+      <td>N</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>135000.0</td>
+      <td>312682.5</td>
+      <td>29686.5</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100007</td>
+      <td>0</td>
+      <td>Cash loans</td>
+      <td>M</td>
+      <td>N</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>121500.0</td>
+      <td>513000.0</td>
+      <td>21865.5</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 122 columns</p>
+</div></div></div>
+</div>
+<div class="section" id="data-cleaning">
+<h2>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sorted_null</span> <span class="o">=</span> <span class="n">original_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">sorted_null</span><span class="o">.</span><span class="n">index</span><span class="p">[(</span><span class="n">sorted_null</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;COMMONAREA_MEDI&#39;, &#39;COMMONAREA_AVG&#39;, &#39;COMMONAREA_MODE&#39;,
+       &#39;NONLIVINGAPARTMENTS_MODE&#39;, &#39;NONLIVINGAPARTMENTS_AVG&#39;,
+       &#39;NONLIVINGAPARTMENTS_MEDI&#39;, &#39;FONDKAPREMONT_MODE&#39;,
+       &#39;LIVINGAPARTMENTS_MODE&#39;, &#39;LIVINGAPARTMENTS_AVG&#39;,
+       &#39;LIVINGAPARTMENTS_MEDI&#39;, &#39;FLOORSMIN_AVG&#39;, &#39;FLOORSMIN_MODE&#39;,
+       &#39;FLOORSMIN_MEDI&#39;, &#39;YEARS_BUILD_MEDI&#39;, &#39;YEARS_BUILD_MODE&#39;,
+       &#39;YEARS_BUILD_AVG&#39;, &#39;OWN_CAR_AGE&#39;, &#39;LANDAREA_MEDI&#39;, &#39;LANDAREA_MODE&#39;,
+       &#39;LANDAREA_AVG&#39;, &#39;BASEMENTAREA_MEDI&#39;, &#39;BASEMENTAREA_AVG&#39;,
+       &#39;BASEMENTAREA_MODE&#39;, &#39;EXT_SOURCE_1&#39;, &#39;NONLIVINGAREA_MODE&#39;,
+       &#39;NONLIVINGAREA_AVG&#39;, &#39;NONLIVINGAREA_MEDI&#39;, &#39;ELEVATORS_MEDI&#39;,
+       &#39;ELEVATORS_AVG&#39;, &#39;ELEVATORS_MODE&#39;, &#39;WALLSMATERIAL_MODE&#39;,
+       &#39;APARTMENTS_MEDI&#39;, &#39;APARTMENTS_AVG&#39;, &#39;APARTMENTS_MODE&#39;,
+       &#39;ENTRANCES_MEDI&#39;, &#39;ENTRANCES_AVG&#39;, &#39;ENTRANCES_MODE&#39;, &#39;LIVINGAREA_AVG&#39;,
+       &#39;LIVINGAREA_MODE&#39;, &#39;LIVINGAREA_MEDI&#39;, &#39;HOUSETYPE_MODE&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We observe that all the above columns contain more than X%(50% in our case) of nulls values, and here we make one of our major assumptions in this EDA that these data are simply unknown and can introduce bias which can affect our analysis(as opposed to them being actually informative and showing something in our data). Future work might involve taking a deeper look into these columns, but for now, with this assumption in mind, we will drop these columns together with some additional columns like ID number, which we expect to be not useful in our analysis:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drop columns with more then 50% missing values + additional ones decided by the group</span>
+<span class="n">drop_col</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SK_ID_CURR&#39;</span><span class="p">,]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">original_df</span><span class="p">[</span><span class="n">sorted_null</span><span class="o">.</span><span class="n">index</span><span class="p">[(</span><span class="n">sorted_null</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="p">)]]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_col</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="eda">
+<h2>EDA<a class="headerlink" href="#eda" title="Permalink to this headline">¶</a></h2>
+<p>In the following parts of our analysis, we will identify some interesting findings in our data and attempt to build a logistic regression model to predict whether a customer will default or not. But for now, let us explore the different variables in our datasets.</p>
+<p>First, we look at the overall rough distribution of several features we are initially interested in through boxplots:</p>
+<div class="section" id="data-intuition">
+<h3>Data Intuition<a class="headerlink" href="#data-intuition" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;FLOORSMAX_MODE&#39;, &#39;FLOORSMAX_MEDI&#39;, &#39;FLOORSMAX_AVG&#39;,
+       &#39;YEARS_BEGINEXPLUATATION_MODE&#39;, &#39;YEARS_BEGINEXPLUATATION_MEDI&#39;,
+       &#39;YEARS_BEGINEXPLUATATION_AVG&#39;, &#39;TOTALAREA_MODE&#39;, &#39;EMERGENCYSTATE_MODE&#39;,
+       &#39;OCCUPATION_TYPE&#39;, &#39;EXT_SOURCE_3&#39;, &#39;AMT_REQ_CREDIT_BUREAU_HOUR&#39;,
+       &#39;AMT_REQ_CREDIT_BUREAU_DAY&#39;, &#39;AMT_REQ_CREDIT_BUREAU_WEEK&#39;,
+       &#39;AMT_REQ_CREDIT_BUREAU_MON&#39;, &#39;AMT_REQ_CREDIT_BUREAU_QRT&#39;,
+       &#39;AMT_REQ_CREDIT_BUREAU_YEAR&#39;, &#39;NAME_TYPE_SUITE&#39;,
+       &#39;OBS_30_CNT_SOCIAL_CIRCLE&#39;, &#39;DEF_30_CNT_SOCIAL_CIRCLE&#39;,
+       &#39;OBS_60_CNT_SOCIAL_CIRCLE&#39;, &#39;DEF_60_CNT_SOCIAL_CIRCLE&#39;, &#39;EXT_SOURCE_2&#39;,
+       &#39;AMT_GOODS_PRICE&#39;, &#39;AMT_ANNUITY&#39;, &#39;CNT_FAM_MEMBERS&#39;,
+       &#39;DAYS_LAST_PHONE_CHANGE&#39;, &#39;CNT_CHILDREN&#39;, &#39;FLAG_DOCUMENT_8&#39;,
+       &#39;NAME_CONTRACT_TYPE&#39;, &#39;CODE_GENDER&#39;, &#39;FLAG_OWN_CAR&#39;, &#39;FLAG_DOCUMENT_2&#39;,
+       &#39;FLAG_DOCUMENT_3&#39;, &#39;FLAG_DOCUMENT_4&#39;, &#39;FLAG_DOCUMENT_5&#39;,
+       &#39;FLAG_DOCUMENT_6&#39;, &#39;FLAG_DOCUMENT_7&#39;, &#39;FLAG_DOCUMENT_9&#39;,
+       &#39;FLAG_DOCUMENT_21&#39;, &#39;FLAG_DOCUMENT_10&#39;, &#39;FLAG_DOCUMENT_11&#39;,
+       &#39;FLAG_OWN_REALTY&#39;, &#39;FLAG_DOCUMENT_13&#39;, &#39;FLAG_DOCUMENT_14&#39;,
+       &#39;FLAG_DOCUMENT_15&#39;, &#39;FLAG_DOCUMENT_16&#39;, &#39;FLAG_DOCUMENT_17&#39;,
+       &#39;FLAG_DOCUMENT_18&#39;, &#39;FLAG_DOCUMENT_19&#39;, &#39;FLAG_DOCUMENT_20&#39;,
+       &#39;FLAG_DOCUMENT_12&#39;, &#39;AMT_CREDIT&#39;, &#39;AMT_INCOME_TOTAL&#39;, &#39;FLAG_PHONE&#39;,
+       &#39;LIVE_CITY_NOT_WORK_CITY&#39;, &#39;REG_CITY_NOT_WORK_CITY&#39;, &#39;TARGET&#39;,
+       &#39;REG_CITY_NOT_LIVE_CITY&#39;, &#39;LIVE_REGION_NOT_WORK_REGION&#39;,
+       &#39;REG_REGION_NOT_WORK_REGION&#39;, &#39;REG_REGION_NOT_LIVE_REGION&#39;,
+       &#39;HOUR_APPR_PROCESS_START&#39;, &#39;WEEKDAY_APPR_PROCESS_START&#39;,
+       &#39;REGION_RATING_CLIENT_W_CITY&#39;, &#39;REGION_RATING_CLIENT&#39;, &#39;FLAG_EMAIL&#39;,
+       &#39;FLAG_CONT_MOBILE&#39;, &#39;ORGANIZATION_TYPE&#39;, &#39;FLAG_WORK_PHONE&#39;,
+       &#39;FLAG_EMP_PHONE&#39;, &#39;FLAG_MOBIL&#39;, &#39;DAYS_ID_PUBLISH&#39;, &#39;DAYS_REGISTRATION&#39;,
+       &#39;DAYS_EMPLOYED&#39;, &#39;DAYS_BIRTH&#39;, &#39;REGION_POPULATION_RELATIVE&#39;,
+       &#39;NAME_HOUSING_TYPE&#39;, &#39;NAME_FAMILY_STATUS&#39;, &#39;NAME_EDUCATION_TYPE&#39;,
+       &#39;NAME_INCOME_TYPE&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DAYS_EMPLOYED&#39;</span><span class="p">,</span> <span class="s1">&#39;AMT_INCOME_TOTAL&#39;</span><span class="p">,</span><span class="s1">&#39;AMT_CREDIT&#39;</span><span class="p">,</span><span class="s1">&#39;AMT_ANNUITY&#39;</span><span class="p">,</span><span class="s1">&#39;DAYS_ID_PUBLISH&#39;</span><span class="p">,</span> <span class="s1">&#39;DAYS_REGISTRATION&#39;</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">features</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_15_0.png" src="_images/main_15_0.png" />
+</div>
+</div>
+<p>While some of the distributions look reasonable, we also observe that there are obviously some strange outliers, for example in the case of days employed, there is a single point who is employed for 350000+ days, and in the AMT_TOTAL_INCOME plot, we also see a client with 100 million in income! This plot is for our initial exploratory purpose only and it perfectly illustrates one important characteristic of our dataset which is that there are errors/extreme individuals, and they might require a closer examination if we plan to use them in further analysis.</p>
+<p>In our case, since we plan to be using AMT_TOTAL_INCOME, we try to take into account of this issue of having extreme/unreliable values by looking at quantiles instead to minimize the impact of such outliers.</p>
+</div>
+<div class="section" id="target">
+<h3>Target<a class="headerlink" href="#target" title="Permalink to this headline">¶</a></h3>
+<p>Next, we then proceed to looking at the general picture of what is the proportion of people using credit cards who are able to pay on time vs those who failed to pay on time(“TARGET” column).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;TARGET&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;TARGET&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">estimator</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Default&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">% o</span><span class="s2">f customers&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of TARGET Variable(0 for non-default, 1 for default)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;proportion of people who paid on time:&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TARGET&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;proportion of people who failed to pay on time:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;TARGET&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_19_0.png" src="_images/main_19_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>proportion of people who paid on time: 0.9192711805431351
+proportion of people who failed to pay on time: 0.08072881945686496
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that there the original data has a high class imbalance, so we might want to bear this fact in mind when performing logistic regression and considering the metrics to look at when evaluating classifiers later.</p>
+</div>
+</div>
+<div class="section" id="ratio-of-default-vs-non-default-for-different-groups">
+<h2>Ratio of Default vs Non-Default for different groups<a class="headerlink" href="#ratio-of-default-vs-non-default-for-different-groups" title="Permalink to this headline">¶</a></h2>
+<p>We will now examine the ratio of defaulters vs non-defaulters between some other categorical variables’ groups</p>
+<div class="section" id="gender">
+<h3>Gender<a class="headerlink" href="#gender" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># omit the several XNA gender entries since we want to avoid assuming one&#39;s gender</span>
+<span class="n">gender_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">]</span><span class="o">!=</span> <span class="s1">&#39;XNA&#39;</span><span class="p">]</span>
+<span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span> <span class="n">gender_df</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_23_0.png" src="_images/main_23_0.png" />
+</div>
+</div>
+<p><strong>Observations:</strong></p>
+<ul class="simple">
+<li><p>Males seem to have a slightly higher proportion of defaults compared to female</p></li>
+</ul>
+<div class="section" id="gender-and-income">
+<h4>Gender and Income<a class="headerlink" href="#gender-and-income" title="Permalink to this headline">¶</a></h4>
+<p>To further investigate the relationship between default risk and gender, we will manually divide income into 5 groups by percentile ranking and see how gender and default rate varies between these different income groups:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># binning AMT_INCOME_TOTAL column based on quantiles</span>
+<span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;VERY LOW&#39;</span><span class="p">,</span><span class="s1">&#39;LOW&#39;</span><span class="p">,</span><span class="s1">&#39;MEDIUM&#39;</span><span class="p">,</span><span class="s1">&#39;HIGH&#39;</span><span class="p">,</span><span class="s1">&#39;VERY HIGH&#39;</span><span class="p">]</span>
+<span class="n">gender_df</span><span class="p">[</span><span class="s1">&#39;AMT_INCOME_Quantile&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">gender_df</span><span class="o">.</span><span class="n">AMT_INCOME_TOTAL</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="n">order</span><span class="p">)</span>
+<span class="n">df_one</span> <span class="o">=</span> <span class="n">gender_df</span><span class="p">[</span><span class="n">gender_df</span><span class="p">[</span><span class="s1">&#39;TARGET&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span><span class="n">x</span><span class="o">=</span> <span class="n">df_one</span><span class="p">[</span><span class="s1">&#39;AMT_INCOME_Quantile&#39;</span><span class="p">],</span><span class="n">hue</span> <span class="o">=</span> <span class="n">df_one</span><span class="p">[</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">],</span><span class="n">discrete</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Income Quantile&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Count of Defaults of F/M in Different Income Groups&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_27_0.png" src="_images/main_27_0.png" />
+</div>
+</div>
+<p>This might be surprising, but we observe that females have an overall higher count of defaults, and in the occasions where males have a higher default count in the higher income groups, they only “win” by a slight amount. This is opposite to what we observed in the previous section, where males were observed to have a slightly higher proportion of defaults compared to female. The reason is that, if you remembered, there are almost <strong>double the amount of female entries vs male entries</strong> in our original dataset!</p>
+<p>Given the class imbalance in gender, we created a plotting function that generates the proportion of defaults of each gender, accounted for the different total counts in gender, and now this new proportion plot give a much more accurate depiction of our actual data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">balanced_plot</span><span class="p">(</span><span class="n">gender_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_30_0.png" src="_images/main_30_0.png" />
+</div>
+</div>
+<p><strong>Observations:</strong></p>
+<ul class="simple">
+<li><p>We now see that, indeed, males seem to have a overall higher rate of default, and this is especially the case in higher income groups, as the gap keeps increasing with income and doubles in the two highest income groups. This is a very interesting observation and further studies might be conducted on this in the future to explore what exactly is contributing to this observation.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="loan-type">
+<h3>Loan Type<a class="headerlink" href="#loan-type" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Loan&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_33_0.png" src="_images/main_33_0.png" />
+</div>
+</div>
+<p><strong>Observations:</strong></p>
+<ul class="simple">
+<li><p>People who take out cash loans have a slightly higher rate of defaulting compared to revolving loans</p></li>
+</ul>
+</div>
+<div class="section" id="income-type">
+<h3>Income Type<a class="headerlink" href="#income-type" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Income Type&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_36_0.png" src="_images/main_36_0.png" />
+</div>
+</div>
+<p><strong>Observations:</strong></p>
+<ul class="simple">
+<li><p>Unemployed and Maternity leave groups seem to have a much higher proportion of default, whereas state servents and pensioners tend to have a lower proportion of defaults among them.</p></li>
+</ul>
+</div>
+<div class="section" id="education-type">
+<h3>Education Type<a class="headerlink" href="#education-type" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Education&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_39_0.png" src="_images/main_39_0.png" />
+</div>
+</div>
+<p><strong>Observations:</strong></p>
+<ul class="simple">
+<li><p>The academic degree and higher education group have a lower proportion of defaults compared to the other groups that are slightly lower in educational degree status</p></li>
+</ul>
+</div>
+<div class="section" id="house-ownership">
+<h3>House Ownership<a class="headerlink" href="#house-ownership" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;House Ownership&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_42_0.png" src="_images/main_42_0.png" />
+</div>
+</div>
+<p><strong>Observations:</strong></p>
+<ul class="simple">
+<li><p>Whether someone owns a house or not does not change significantly the rates of defaulting on a loan</p></li>
+</ul>
+</div>
+<div class="section" id="house-type">
+<h3>House Type<a class="headerlink" href="#house-type" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_HOUSING_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;House Type&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_45_0.png" src="_images/main_45_0.png" />
+</div>
+</div>
+<p><strong>Observations:</strong></p>
+<ul class="simple">
+<li><p>Despite significant class imbalance where the vast majority of people have a home/apartment, the highest rates of defaulting in the house type category are those who live in a rented apartment. Higher default rates are also seen for those that live with their parents.</p></li>
+</ul>
+</div>
+<div class="section" id="number-of-surrounding-30dpd-defaults">
+<h3>Number of Surrounding 30DPD Defaults<a class="headerlink" href="#number-of-surrounding-30dpd-defaults" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_numerical_discrete_group</span><span class="p">(</span><span class="s1">&#39;OBS_30_CNT_SOCIAL_CIRCLE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Number of Surrounding 30DPD Defaults&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_48_0.png" src="_images/main_48_0.png" />
+</div>
+</div>
+<p><strong>Observations:</strong></p>
+<ul class="simple">
+<li><p>With the increase in the number of surrounding 30day default cases, we also see a general increase in default proportion.</p></li>
+</ul>
+</div>
+<div class="section" id="number-of-family-members">
+<h3>Number of Family Members<a class="headerlink" href="#number-of-family-members" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_numerical_discrete_group</span><span class="p">(</span><span class="s1">&#39;CNT_FAM_MEMBERS&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Number of Family Members&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/main_51_0.png" src="_images/main_51_0.png" />
+</div>
+</div>
+<p><strong>Observations:</strong></p>
+<ul class="simple">
+<li><p>With the increase in the number of family numbers, we also see a slight upward trend in default proportion.</p></li>
+</ul>
+<div class="section" id="data-takeaways">
+<h4>Data Takeaways<a class="headerlink" href="#data-takeaways" title="Permalink to this headline">¶</a></h4>
+<p>The plots above give a clear picture about the type of people within the data. The majority of people are working, female, own a home, are living in a home/apartment, and have 0 surrounding 30DPD defaults. It can also be seen that the max education for the majority of people in the data is a secondary education, which in the USA, refers to completing high school. It is interesting to see just how many people in the data own an apartment or house as it is significantly higher than for example the number of people renting. With that said, the data population really is not representative of the overall population as a whole.</p>
+<p>*Note that we did remove the extreme outliers on the right end for the above two discrete data plotting in order to achieve better visualization clarity, and future work might include more detailed analysis on the outliers.</p>
+</div>
+</div>
+</div>
+<div class="section" id="logistic-regression-model">
+<h2>Logistic Regression Model<a class="headerlink" href="#logistic-regression-model" title="Permalink to this headline">¶</a></h2>
+<p>The modeling section focuses on building a logistic regression model to try and predict whether someone will default on a loan or not given particular parameters from the data. As seens in the previous section, there is significant class imbalance where the vast majority of people in the data do not default on their loan. Thus metrics such as recall and precision are more important tools to determine the validity of our model compared to accuracy.</p>
+<div class="section" id="data-processing">
+<h3>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h3>
+<p>Here we pick our features and also create dummy variables for the categorical features.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SelectedCol</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;TARGET&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">,</span><span class="s1">&#39;OBS_30_CNT_SOCIAL_CIRCLE&#39;</span><span class="p">,</span><span class="s1">&#39;CNT_FAM_MEMBERS&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">]</span>
+<span class="n">Features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">,</span><span class="s1">&#39;OBS_30_CNT_SOCIAL_CIRCLE&#39;</span><span class="p">,</span><span class="s1">&#39;CNT_FAM_MEMBERS&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># preprocessing gender and flag_own_car </span>
+<span class="n">categorical_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span> <span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">]</span>
+<span class="n">processed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">SelectedCol</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">categorical_cols</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coefficients</span> <span class="o">=</span> <span class="n">logistic</span><span class="o">.</span><span class="n">logistic_reg</span><span class="p">(</span><span class="n">processed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>train_precision = 0.5565637783562662 vs test_precision = 0.09927200529450694
+train_recall = 0.7483 vs test_recall = 0.7545271629778671
+</pre></div>
+</div>
+<img alt="_images/main_61_1.png" src="_images/main_61_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="results">
+<h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
+<p>To account for the class imbalance, a very important characteristic of our data that could significantly affect our model predictions, we tried to balance the training set through random undersampling of the 0 group and also adjusting the threshold to a point where we have high recall while maintaining a normal precision. We especially want higher recall since in reality, we would want to mark, ideally, everyone who is actually going to default, and recall penalized false negatives, giving us this ideal prediction. We also would not worry about marking someone suspicious and likely to default, because in reality these false positives will be easy to clear out by providing addition supplementary materials, like bank statements, credit rating scores, etc. Note that while both the training and test sets have a relative high recall, the precision is very low on the test set, mainly because the test set is not manually balanced and retains this trait of highly imbalanced classes from the original data.</p>
+<p>We can also take a look at the coefficients and have an idea of which features contributes the most to predicting default risk:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coefficients</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;coeff&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>feature</th>
+      <th>coeff</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>13</th>
+      <td>NAME_INCOME_TYPE_Unemployed</td>
+      <td>2.971938</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>NAME_INCOME_TYPE_Maternity leave</td>
+      <td>1.005744</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>NAME_EDUCATION_TYPE_Lower secondary</td>
+      <td>0.769081</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>NAME_EDUCATION_TYPE_Secondary / secondary special</td>
+      <td>0.329509</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>NAME_FAMILY_STATUS_Single / not married</td>
+      <td>0.261468</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="authors-contribution">
+<h2>Authors Contribution<a class="headerlink" href="#authors-contribution" title="Permalink to this headline">¶</a></h2>
+<p>Joe: I added to Uma’s initial version of EDA, created the tools packages(plotting and logistic regression), added tests for the functions and also help wrote on the methods and analysis in the notebook.</p>
+<p>Uma:</p>
+<p>Isaac:</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to HW 7</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Uma, Joe, Isaac<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
