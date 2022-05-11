@@ -450,6 +450,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Credit Account Default Status and Characteristics<a class="headerlink" href="#credit-account-default-status-and-characteristics" title="Permalink to this headline">¶</a></h1>
 <p>Data source: <a class="reference external" href="https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=application_data.csv">https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=application_data.csv</a> (select all columns when downloading)</p>
 <p>Detailed data and columns description and also be found using this link, under Data and Data Explorer-columns_description.csv</p>
+<p>In general, credit history and other features are important indicators for companies when determining whether or not to give a potential customer a loan. We recognize in the general the inherent biases in society that contribute to particular groups not being able to have the set criteria to take out a loan. This issue has continued to contribute to racism and classism within the United States. Our analysis and exploration of this credit account default data is merely an exercise to understand the characteristics of those that default and by no means intend to offend specific groups as this is just one data set that is not representative of the entire country.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
@@ -712,7 +713,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_14_0.png" src="_images/details_14_0.png" />
+<img alt="_images/details_15_0.png" src="_images/details_15_0.png" />
 </div>
 </div>
 <p>While some of the distributions look reasonable, we also observe that there are obviously some strange outliers, for example in the case of days employed, there is a single point who is employed for 350000+ days, and in the AMT_TOTAL_INCOME plot, we also see a client with 100 million in income! This plot is for our initial exploratory purpose only and it perfectly illustrates one important characteristic of our dataset which is that there are errors/extreme individuals, and they might require a closer examination if we plan to use them in further analysis.</p>
@@ -729,7 +730,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_18_0.png" src="_images/details_18_0.png" />
+<img alt="_images/details_19_0.png" src="_images/details_19_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>proportion of people who paid on time: 0.9192711805431351
 proportion of people who failed to pay on time: 0.08072881945686496
 </pre></div>
@@ -754,7 +755,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_22_0.png" src="_images/details_22_0.png" />
+<img alt="_images/details_23_0.png" src="_images/details_23_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -772,7 +773,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_26_0.png" src="_images/details_26_0.png" />
+<img alt="_images/details_27_0.png" src="_images/details_27_0.png" />
 </div>
 </div>
 <p>This might be surprising, but we observe that females have an overall higher count of defaults, and in the occasions where males have a higher default count in the higher income groups, they only “win” by a slight amount. This is opposite to what we observed in the previous section, where males were observed to have a slightly higher proportion of defaults compared to female. The reason is that, if you remembered, there are almost <strong>double the amount of female entries vs male entries</strong> in our original dataset!</p>
@@ -785,7 +786,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_29_0.png" src="_images/details_29_0.png" />
+<img alt="_images/details_30_0.png" src="_images/details_30_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -804,7 +805,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_32_0.png" src="_images/details_32_0.png" />
+<img alt="_images/details_33_0.png" src="_images/details_33_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -822,7 +823,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_35_0.png" src="_images/details_35_0.png" />
+<img alt="_images/details_36_0.png" src="_images/details_36_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -840,7 +841,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_38_0.png" src="_images/details_38_0.png" />
+<img alt="_images/details_39_0.png" src="_images/details_39_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -858,7 +859,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_41_0.png" src="_images/details_41_0.png" />
+<img alt="_images/details_42_0.png" src="_images/details_42_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -876,7 +877,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_44_0.png" src="_images/details_44_0.png" />
+<img alt="_images/details_45_0.png" src="_images/details_45_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -894,7 +895,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_47_0.png" src="_images/details_47_0.png" />
+<img alt="_images/details_48_0.png" src="_images/details_48_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -912,7 +913,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/details_50_0.png" src="_images/details_50_0.png" />
+<img alt="_images/details_51_0.png" src="_images/details_51_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -969,7 +970,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 train_recall = 0.7483 vs test_recall = 0.7545271629778671
 </pre></div>
 </div>
-<img alt="_images/details_60_1.png" src="_images/details_60_1.png" />
+<img alt="_images/details_61_1.png" src="_images/details_61_1.png" />
 </div>
 </div>
 </div>
