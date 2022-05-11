@@ -203,8 +203,8 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-cleaning">
-   Data Cleaning
+  <a class="reference internal nav-link" href="#data-cleaning-and-serialization">
+   Data Cleaning and Serialization
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -333,8 +333,8 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-cleaning">
-   Data Cleaning
+  <a class="reference internal nav-link" href="#data-cleaning-and-serialization">
+   Data Cleaning and Serialization
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -486,38 +486,36 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<p><strong>Important Note:</strong> Original data can be downloaded with the link provided above and our repo does not contain the original raw dataset due to its size(&gt;100mb) exceeding GitHub’s limit. Instead, we uploaded in our repo a slightly cleaned, serialized version of the data, but you can download the original dataset locally and check by uncommenting the code that we used to clean and serialize our data.</p>
+<div class="section" id="data-cleaning-and-serialization">
+<h2>Data Cleaning and Serialization<a class="headerlink" href="#data-cleaning-and-serialization" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># original_df.head()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="data-cleaning">
-<h2>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sorted_null</span> <span class="o">=</span> <span class="n">original_df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">sorted_null</span><span class="o">.</span><span class="n">index</span><span class="p">[(</span><span class="n">sorted_null</span><span class="o">&gt;</span><span class="mf">0.5</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sorted_null = original_df.isnull().mean().sort_values(ascending=False)</span>
+
+<span class="c1">## serialize</span>
+
+<span class="c1"># a = np.array(list(sorted_null.index[(sorted_null&gt;0.5)]))</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;null_index.npy&#39;</span>
+<span class="c1"># np.save(fname, a)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;COMMONAREA_MEDI&#39;, &#39;COMMONAREA_AVG&#39;, &#39;COMMONAREA_MODE&#39;,
-       &#39;NONLIVINGAPARTMENTS_MODE&#39;, &#39;NONLIVINGAPARTMENTS_AVG&#39;,
-       &#39;NONLIVINGAPARTMENTS_MEDI&#39;, &#39;FONDKAPREMONT_MODE&#39;,
-       &#39;LIVINGAPARTMENTS_MODE&#39;, &#39;LIVINGAPARTMENTS_AVG&#39;,
-       &#39;LIVINGAPARTMENTS_MEDI&#39;, &#39;FLOORSMIN_AVG&#39;, &#39;FLOORSMIN_MODE&#39;,
-       &#39;FLOORSMIN_MEDI&#39;, &#39;YEARS_BUILD_MEDI&#39;, &#39;YEARS_BUILD_MODE&#39;,
-       &#39;YEARS_BUILD_AVG&#39;, &#39;OWN_CAR_AGE&#39;, &#39;LANDAREA_MEDI&#39;, &#39;LANDAREA_MODE&#39;,
-       &#39;LANDAREA_AVG&#39;, &#39;BASEMENTAREA_MEDI&#39;, &#39;BASEMENTAREA_AVG&#39;,
-       &#39;BASEMENTAREA_MODE&#39;, &#39;EXT_SOURCE_1&#39;, &#39;NONLIVINGAREA_MODE&#39;,
-       &#39;NONLIVINGAREA_AVG&#39;, &#39;NONLIVINGAREA_MEDI&#39;, &#39;ELEVATORS_MEDI&#39;,
-       &#39;ELEVATORS_AVG&#39;, &#39;ELEVATORS_MODE&#39;, &#39;WALLSMATERIAL_MODE&#39;,
-       &#39;APARTMENTS_MEDI&#39;, &#39;APARTMENTS_AVG&#39;, &#39;APARTMENTS_MODE&#39;,
-       &#39;ENTRANCES_MEDI&#39;, &#39;ENTRANCES_AVG&#39;, &#39;ENTRANCES_MODE&#39;, &#39;LIVINGAREA_AVG&#39;,
-       &#39;LIVINGAREA_MODE&#39;, &#39;LIVINGAREA_MEDI&#39;, &#39;HOUSETYPE_MODE&#39;],
-      dtype=&#39;object&#39;)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;COMMONAREA_MEDI&#39; &#39;COMMONAREA_AVG&#39; &#39;COMMONAREA_MODE&#39;
+ &#39;NONLIVINGAPARTMENTS_MODE&#39; &#39;NONLIVINGAPARTMENTS_AVG&#39;
+ &#39;NONLIVINGAPARTMENTS_MEDI&#39; &#39;FONDKAPREMONT_MODE&#39; &#39;LIVINGAPARTMENTS_MODE&#39;
+ &#39;LIVINGAPARTMENTS_AVG&#39; &#39;LIVINGAPARTMENTS_MEDI&#39; &#39;FLOORSMIN_AVG&#39;
+ &#39;FLOORSMIN_MODE&#39; &#39;FLOORSMIN_MEDI&#39; &#39;YEARS_BUILD_MEDI&#39; &#39;YEARS_BUILD_MODE&#39;
+ &#39;YEARS_BUILD_AVG&#39; &#39;OWN_CAR_AGE&#39; &#39;LANDAREA_MEDI&#39; &#39;LANDAREA_MODE&#39;
+ &#39;LANDAREA_AVG&#39; &#39;BASEMENTAREA_MEDI&#39; &#39;BASEMENTAREA_AVG&#39; &#39;BASEMENTAREA_MODE&#39;
+ &#39;EXT_SOURCE_1&#39; &#39;NONLIVINGAREA_MODE&#39; &#39;NONLIVINGAREA_AVG&#39;
+ &#39;NONLIVINGAREA_MEDI&#39; &#39;ELEVATORS_MEDI&#39; &#39;ELEVATORS_AVG&#39; &#39;ELEVATORS_MODE&#39;
+ &#39;WALLSMATERIAL_MODE&#39; &#39;APARTMENTS_MEDI&#39; &#39;APARTMENTS_AVG&#39; &#39;APARTMENTS_MODE&#39;
+ &#39;ENTRANCES_MEDI&#39; &#39;ENTRANCES_AVG&#39; &#39;ENTRANCES_MODE&#39; &#39;LIVINGAREA_AVG&#39;
+ &#39;LIVINGAREA_MODE&#39; &#39;LIVINGAREA_MEDI&#39; &#39;HOUSETYPE_MODE&#39;]
 </pre></div>
 </div>
 </div>
@@ -525,20 +523,189 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We observe that all the above columns contain more than X%(50% in our case) of nulls values, and here we make one of our major assumptions in this EDA that these data are simply unknown and can introduce bias which can affect our analysis(as opposed to them being actually informative and showing something in our data). Future work might involve taking a deeper look into these columns, but for now, with this assumption in mind, we will drop these columns together with some additional columns like ID number, which we expect to be not useful in our analysis:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drop columns with more then 50% missing values + additional ones decided by the group</span>
-<span class="n">drop_col</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SK_ID_CURR&#39;</span><span class="p">,]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">original_df</span><span class="p">[</span><span class="n">sorted_null</span><span class="o">.</span><span class="n">index</span><span class="p">[(</span><span class="n">sorted_null</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="p">)]]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_col</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## drop columns with more then 50% missing values + additional ones decided by the group</span>
+<span class="c1"># drop_col = [&#39;SK_ID_CURR&#39;,]</span>
+<span class="c1"># df = original_df[sorted_null.index[(sorted_null&lt;0.5)]].drop(drop_col, axis=1)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_feather</span><span class="p">(</span><span class="s2">&quot;data/serialized.fth&quot;</span><span class="p">)</span>
-<span class="c1"># pd.read_feather(&quot;processed_data.fth&quot;) to read serialized dataframe</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## serialize</span>
+<span class="c1"># df.to_feather(&quot;data/serialized.fth&quot;)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;data/serialized.fth&quot;</span><span class="p">)</span> <span class="c1"># read cleaned, serialized data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FLOORSMAX_MODE</th>
+      <th>FLOORSMAX_MEDI</th>
+      <th>FLOORSMAX_AVG</th>
+      <th>YEARS_BEGINEXPLUATATION_MODE</th>
+      <th>YEARS_BEGINEXPLUATATION_MEDI</th>
+      <th>YEARS_BEGINEXPLUATATION_AVG</th>
+      <th>TOTALAREA_MODE</th>
+      <th>EMERGENCYSTATE_MODE</th>
+      <th>OCCUPATION_TYPE</th>
+      <th>EXT_SOURCE_3</th>
+      <th>...</th>
+      <th>FLAG_MOBIL</th>
+      <th>DAYS_ID_PUBLISH</th>
+      <th>DAYS_REGISTRATION</th>
+      <th>DAYS_EMPLOYED</th>
+      <th>DAYS_BIRTH</th>
+      <th>REGION_POPULATION_RELATIVE</th>
+      <th>NAME_HOUSING_TYPE</th>
+      <th>NAME_FAMILY_STATUS</th>
+      <th>NAME_EDUCATION_TYPE</th>
+      <th>NAME_INCOME_TYPE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0833</td>
+      <td>0.0833</td>
+      <td>0.0833</td>
+      <td>0.9722</td>
+      <td>0.9722</td>
+      <td>0.9722</td>
+      <td>0.0149</td>
+      <td>No</td>
+      <td>Laborers</td>
+      <td>0.139376</td>
+      <td>...</td>
+      <td>1</td>
+      <td>-2120</td>
+      <td>-3648.0</td>
+      <td>-637</td>
+      <td>-9461</td>
+      <td>0.018801</td>
+      <td>House / apartment</td>
+      <td>Single / not married</td>
+      <td>Secondary / secondary special</td>
+      <td>Working</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.2917</td>
+      <td>0.2917</td>
+      <td>0.2917</td>
+      <td>0.9851</td>
+      <td>0.9851</td>
+      <td>0.9851</td>
+      <td>0.0714</td>
+      <td>No</td>
+      <td>Core staff</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>1</td>
+      <td>-291</td>
+      <td>-1186.0</td>
+      <td>-1188</td>
+      <td>-16765</td>
+      <td>0.003541</td>
+      <td>House / apartment</td>
+      <td>Married</td>
+      <td>Higher education</td>
+      <td>State servant</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Laborers</td>
+      <td>0.729567</td>
+      <td>...</td>
+      <td>1</td>
+      <td>-2531</td>
+      <td>-4260.0</td>
+      <td>-225</td>
+      <td>-19046</td>
+      <td>0.010032</td>
+      <td>House / apartment</td>
+      <td>Single / not married</td>
+      <td>Secondary / secondary special</td>
+      <td>Working</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Laborers</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>1</td>
+      <td>-2437</td>
+      <td>-9833.0</td>
+      <td>-3039</td>
+      <td>-19005</td>
+      <td>0.008019</td>
+      <td>House / apartment</td>
+      <td>Civil marriage</td>
+      <td>Secondary / secondary special</td>
+      <td>Working</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Core staff</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>1</td>
+      <td>-3458</td>
+      <td>-4311.0</td>
+      <td>-3038</td>
+      <td>-19932</td>
+      <td>0.028663</td>
+      <td>House / apartment</td>
+      <td>Single / not married</td>
+      <td>Secondary / secondary special</td>
+      <td>Working</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 80 columns</p>
+</div></div></div>
 </div>
 </div>
 <div class="section" id="eda">
@@ -842,8 +1009,8 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <span class="n">categorical_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span> <span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">]</span>
 <span class="n">processed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">SelectedCol</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">categorical_cols</span><span class="p">)</span>
 <span class="c1"># saving dataframes</span>
-<span class="n">processed</span><span class="o">.</span><span class="n">to_feather</span><span class="p">(</span><span class="s2">&quot;processed_data.fth&quot;</span><span class="p">)</span>
-<span class="c1"># pd.read_feather(&quot;processed_data.fth&quot;) to read serialized dataframe</span>
+<span class="n">processed</span><span class="o">.</span><span class="n">to_feather</span><span class="p">(</span><span class="s2">&quot;data/processed_for_logistic_reg.fth&quot;</span><span class="p">)</span>
+<span class="c1"># pd.read_feather(&quot;data/processed_for_logistic_reg.fth&quot;) to read serialized dataframe</span>
 </pre></div>
 </div>
 </div>
@@ -935,7 +1102,7 @@ train_recall = 0.7483 vs test_recall = 0.7545271629778671
 </div>
 <div class="section" id="authors-contribution">
 <h2>Authors Contribution<a class="headerlink" href="#authors-contribution" title="Permalink to this headline">¶</a></h2>
-<p>Joe: Joe added to Uma’s initial version of EDA, created the functions(plotting and logistic regression) and the tools packages, added docstrings and tests for the functions and also wrote texts on the methods and analysis for the notebook.</p>
+<p>Joe: Joe added to Uma’s initial version of EDA, serialized the data and intermediate results, created the functions(plotting and logistic regression) and the tools packages, added docstrings and tests for the functions and also wrote texts on the methods and analysis for the notebook.</p>
 <p>Uma: Uma began the EDA and wrote the backup code towards the end(deleted for cleanness of the final versions but can be found on earlier versions of the notebook). She also wrote the initial code for the logistic regression modeling as well as set up the binder link.</p>
 <p>Isaac: Isaac created the environment fiels as well as initiated the building of the hw7_tools library and the inital tests. He also turned the repo into a jupyter-book that can be viewed on GitHub Pages.</p>
 <p><strong>Overall the three members collaborated and contributed with equal efforts.</strong></p>
