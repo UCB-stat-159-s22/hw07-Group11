@@ -7,12 +7,11 @@ import os
 
 import hw7_tools.plot_tools as pt
 
-DATA = os.getcwd() + "/data/application_data.csv"
-print(DATA)
+DATA = os.getcwd() + "/data/serialized.fth"
 
 OUTPUT = os.getcwd() + "/output"
 
-df = pd.read_csv(str(DATA))
+df = pd.read_feather(DATA)
 
 gender_df = df[df['CODE_GENDER']!= 'XNA']
 pt.plot_default_in_category_group('CODE_GENDER', gender_df, 'Gender')
