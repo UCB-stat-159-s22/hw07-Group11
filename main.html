@@ -303,6 +303,11 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors-contribution">
    Authors Contribution
   </a>
@@ -426,6 +431,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#authors-contribution">
@@ -1074,11 +1084,17 @@ train_recall = 0.7483 vs test_recall = 0.7545271629778671
 </div>
 </div>
 </div>
+<div class="section" id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<p>Throughout our EDA, we were able to find some very interesting relations on how default ratios differed in different groups. By looking at the coefficients from our simple logistic regression model, we were also able to confirm many of the relationships we discovered in the distribution and proportion plots. From what we have created, some major influencers of credit risks include being unemployed, on maternity leave, or having lower education status. We also visualized and found out that there are differences in default proportions among genders, and that judging by our data, male seems to have more default rate, especially in high income brackets.</p>
+<p>While we think the results especially for the gender and income are quite convincing and also intuitive, we have to acknoledge that this is just a simple EDA and is far from sufficient if we want to establish stronger relationship such as causation. Throughout our notebook we also noted ideas suitable for future, more in-depth analysis, and our reproducibility efforts put in for this research will, ideally, enable future work to be easily built upon the current analysis and results.</p>
+</div>
 <div class="section" id="authors-contribution">
 <h2>Authors Contribution<a class="headerlink" href="#authors-contribution" title="Permalink to this headline">¶</a></h2>
-<p>Joe: I added to Uma’s initial version of EDA, created the tools packages(plotting and logistic regression), added tests for the functions and also help write texts on the methods and analysis for the notebook.</p>
-<p>Uma:</p>
-<p>Isaac:</p>
+<p>Joe: Joe added to Uma’s initial version of EDA, created the functions(plotting and logistic regression) and the tools packages, added docstrings and tests for the functions and also wrote texts on the methods and analysis for the notebook.</p>
+<p>Uma: Uma began the EDA and wrote the backup code towards the end(deleted for cleanness of the final versions but can be found on earlier versions of the notebook). She also wrote the initial code for the logistic regression modeling as well as set up the binder link.</p>
+<p>Isaac: Isaac created the environment fiels as well as initiated the building of the hw7_tools library and the inital tests. He also turned the repo into a jupyter-book that can be viewed on GitHub Pages.</p>
+<p><strong>Overall the three members collaborated and contributed with equal efforts.</strong></p>
 </div>
 </div>
 
