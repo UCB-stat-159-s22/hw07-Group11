@@ -192,6 +192,7 @@ def feature_plot(features,df):
     for i in enumerate(features):
         plt.subplot(3, 2, i[0]+1)
         sns.boxplot(x = i[1], data = df)
+        plt.title("Data Distribution")    
     plt.savefig("output/feature_plot.png")
     plt.show()
 
@@ -200,8 +201,8 @@ def target_plot(df):
     plt.xlabel("Default")
     plt.ylabel("% of customers")
     plt.title("Distribution of TARGET Variable(0 for non-default, 1 for default)")
-    plt.show()
     plt.savefig("output/target_plot.png")
+    plt.show()
     print("proportion of people who paid on time:", 1-df["TARGET"].mean())
     print("proportion of people who failed to pay on time:", df["TARGET"].mean())
     

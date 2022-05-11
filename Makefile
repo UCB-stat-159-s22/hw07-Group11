@@ -1,6 +1,6 @@
 .PHONY : all
 all : 
-	jupyter execute main.ipynb
+	jupyter execute details.ipynb
     
 
 .PHONY : env
@@ -17,3 +17,5 @@ hw7_tools :
 .PHONY : clean
 clean :
 	rm -f output/*.png
+	rm -f output/*.fth
+    
