@@ -5,3 +5,4 @@ format: jb-book
 root: README
 chapters:
 - file: main
+  title: Main Analysis
