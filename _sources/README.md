@@ -15,8 +15,8 @@ In our studies, we will take a look at credit risk and how default status varies
 The following are the available make commands:
 - `env`: Creates the environment and configures it by activating it and installing ipykernel into it
 - `hw7_tools`: Installs the hw07 tools package
-- `all`: Execute and generate outputs
-- `clean`: Remove all figures from the /output directory
+- `all`: Executes and generates outputs
+- `clean`: Removes all figures from the /output directory
 
 ## Some helpful commands:
 
