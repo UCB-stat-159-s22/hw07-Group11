@@ -92,7 +92,8 @@ def balanced_plot(gender_df):
     f, ax = plt.subplots(1,figsize=(12,6))
     sns.barplot(ax = ax,data = grouped_df,x = 'AMT_INCOME_Quantile',y='balanced_count',hue= 'CODE_GENDER')
     ax.set_xlabel("Income Quantile")
-    ax.set_title("Default Proportions(Imbalance Accounted) of F/M in Different Income Groups");
+    ax.set_title("Default Proportions(Imbalance Accounted) of F/M in Different Income Groups")
+    plt.savefig("output/balanced_plot.png");
     return accounted_for_imbalance
 
     
@@ -183,6 +184,7 @@ def logistic_reg(processed, threshold=0.5):
     print(f'train_precision = {precision} vs test_precision = {test_precision}')
     print(f'train_recall = {recall} vs test_recall = {test_recall}')
     coefficients = pd.DataFrame({'feature': balanced_train_x.columns, 'coeff': model.coef_[0]}, columns=['feature', 'coeff'])
+    plt.savefig("output/reg_matrix.png")
     return coefficients
 
 def feature_plot(features,df):
@@ -191,4 +193,27 @@ def feature_plot(features,df):
         plt.subplot(3, 2, i[0]+1)
         sns.boxplot(x = i[1], data = df)
     plt.savefig("output/feature_plot.png")
+    plt.show()
+
+def target_plot(df):
+    sns.barplot(x="TARGET", y="TARGET", data=df, estimator=lambda x: len(x) / len(df) * 100)
+    plt.xlabel("Default")
+    plt.ylabel("% of customers")
+    plt.title("Distribution of TARGET Variable(0 for non-default, 1 for default)")
+    plt.show()
+    plt.savefig("output/target_plot.png")
+    print("proportion of people who paid on time:", 1-df["TARGET"].mean())
+    print("proportion of people who failed to pay on time:", df["TARGET"].mean())
+    
+def gender_income_plot(gender_df):
+    # binning AMT_INCOME_TOTAL column based on quantiles
+    order = ['VERY LOW','LOW','MEDIUM','HIGH','VERY HIGH']
+    gender_df['AMT_INCOME_Quantile'] = pd.qcut(gender_df.AMT_INCOME_TOTAL, q=[0,0.2,0.4,0.6,0.8,1], labels=order)
+    df_one = gender_df[gender_df['TARGET']==1]
+    
+    f, ax = plt.subplots(1,figsize=(12,6))
+    sns.histplot(ax = ax,x= df_one['AMT_INCOME_Quantile'],hue = df_one['CODE_GENDER'],discrete = True)
+    ax.set_xlabel("Income Quantile")
+    ax.set_title("Count of Defaults of F/M in Different Income Groups");
+    plt.savefig("output/gender_income_plot.png")
     plt.show()
