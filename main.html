@@ -275,13 +275,11 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal nav-link" href="#number-of-family-members">
      Number of Family Members
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#data-takeaways">
-       Data Takeaways
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-data-takeaways">
+     Some Data Takeaways
+    </a>
    </li>
   </ul>
  </li>
@@ -291,8 +289,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-processing">
-     Data Processing
+    <a class="reference internal nav-link" href="#feature-selection-and-modeling">
+     Feature Selection and Modeling
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -405,13 +403,11 @@ const thebe_selector_output = ".output, .cell_output"
     <a class="reference internal nav-link" href="#number-of-family-members">
      Number of Family Members
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#data-takeaways">
-       Data Takeaways
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-data-takeaways">
+     Some Data Takeaways
+    </a>
    </li>
   </ul>
  </li>
@@ -421,8 +417,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-processing">
-     Data Processing
+    <a class="reference internal nav-link" href="#feature-selection-and-modeling">
+     Feature Selection and Modeling
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -515,7 +511,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>We observe that all the above columns contain more than X%(50% in our case) of nulls values, and here we make one of our major assumptions in this EDA that these data are simply unknown and can introduce bias which can affect our analysis(as opposed to them being actually informative and showing something in our data). Future work might involve taking a deeper look into these columns, but for now, with this assumption in mind, we will drop these columns together with some additional columns like ID number, which we expect to be not useful in our analysis:</p>
+<p>We can check that all the above columns contain more than X%(50% in our case) of nulls values, and here we make one of our major assumptions in this EDA that these data are simply unknown and can introduce bias which can affect our analysis(as opposed to them being actually informative and showing something in our data). Future work might involve taking a deeper look into these columns, but for now, with this assumption in mind, we will drop these columns together with some additional columns like ID number, which we expect to be not useful in our analysis:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## drop columns with more then 50% missing values + additional ones decided by the group</span>
@@ -711,47 +707,6 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Data Intuition<a class="headerlink" href="#data-intuition" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;FLOORSMAX_MODE&#39;, &#39;FLOORSMAX_MEDI&#39;, &#39;FLOORSMAX_AVG&#39;,
-       &#39;YEARS_BEGINEXPLUATATION_MODE&#39;, &#39;YEARS_BEGINEXPLUATATION_MEDI&#39;,
-       &#39;YEARS_BEGINEXPLUATATION_AVG&#39;, &#39;TOTALAREA_MODE&#39;, &#39;EMERGENCYSTATE_MODE&#39;,
-       &#39;OCCUPATION_TYPE&#39;, &#39;EXT_SOURCE_3&#39;, &#39;AMT_REQ_CREDIT_BUREAU_HOUR&#39;,
-       &#39;AMT_REQ_CREDIT_BUREAU_DAY&#39;, &#39;AMT_REQ_CREDIT_BUREAU_WEEK&#39;,
-       &#39;AMT_REQ_CREDIT_BUREAU_MON&#39;, &#39;AMT_REQ_CREDIT_BUREAU_QRT&#39;,
-       &#39;AMT_REQ_CREDIT_BUREAU_YEAR&#39;, &#39;NAME_TYPE_SUITE&#39;,
-       &#39;OBS_30_CNT_SOCIAL_CIRCLE&#39;, &#39;DEF_30_CNT_SOCIAL_CIRCLE&#39;,
-       &#39;OBS_60_CNT_SOCIAL_CIRCLE&#39;, &#39;DEF_60_CNT_SOCIAL_CIRCLE&#39;, &#39;EXT_SOURCE_2&#39;,
-       &#39;AMT_GOODS_PRICE&#39;, &#39;AMT_ANNUITY&#39;, &#39;CNT_FAM_MEMBERS&#39;,
-       &#39;DAYS_LAST_PHONE_CHANGE&#39;, &#39;CNT_CHILDREN&#39;, &#39;FLAG_DOCUMENT_8&#39;,
-       &#39;NAME_CONTRACT_TYPE&#39;, &#39;CODE_GENDER&#39;, &#39;FLAG_OWN_CAR&#39;, &#39;FLAG_DOCUMENT_2&#39;,
-       &#39;FLAG_DOCUMENT_3&#39;, &#39;FLAG_DOCUMENT_4&#39;, &#39;FLAG_DOCUMENT_5&#39;,
-       &#39;FLAG_DOCUMENT_6&#39;, &#39;FLAG_DOCUMENT_7&#39;, &#39;FLAG_DOCUMENT_9&#39;,
-       &#39;FLAG_DOCUMENT_21&#39;, &#39;FLAG_DOCUMENT_10&#39;, &#39;FLAG_DOCUMENT_11&#39;,
-       &#39;FLAG_OWN_REALTY&#39;, &#39;FLAG_DOCUMENT_13&#39;, &#39;FLAG_DOCUMENT_14&#39;,
-       &#39;FLAG_DOCUMENT_15&#39;, &#39;FLAG_DOCUMENT_16&#39;, &#39;FLAG_DOCUMENT_17&#39;,
-       &#39;FLAG_DOCUMENT_18&#39;, &#39;FLAG_DOCUMENT_19&#39;, &#39;FLAG_DOCUMENT_20&#39;,
-       &#39;FLAG_DOCUMENT_12&#39;, &#39;AMT_CREDIT&#39;, &#39;AMT_INCOME_TOTAL&#39;, &#39;FLAG_PHONE&#39;,
-       &#39;LIVE_CITY_NOT_WORK_CITY&#39;, &#39;REG_CITY_NOT_WORK_CITY&#39;, &#39;TARGET&#39;,
-       &#39;REG_CITY_NOT_LIVE_CITY&#39;, &#39;LIVE_REGION_NOT_WORK_REGION&#39;,
-       &#39;REG_REGION_NOT_WORK_REGION&#39;, &#39;REG_REGION_NOT_LIVE_REGION&#39;,
-       &#39;HOUR_APPR_PROCESS_START&#39;, &#39;WEEKDAY_APPR_PROCESS_START&#39;,
-       &#39;REGION_RATING_CLIENT_W_CITY&#39;, &#39;REGION_RATING_CLIENT&#39;, &#39;FLAG_EMAIL&#39;,
-       &#39;FLAG_CONT_MOBILE&#39;, &#39;ORGANIZATION_TYPE&#39;, &#39;FLAG_WORK_PHONE&#39;,
-       &#39;FLAG_EMP_PHONE&#39;, &#39;FLAG_MOBIL&#39;, &#39;DAYS_ID_PUBLISH&#39;, &#39;DAYS_REGISTRATION&#39;,
-       &#39;DAYS_EMPLOYED&#39;, &#39;DAYS_BIRTH&#39;, &#39;REGION_POPULATION_RELATIVE&#39;,
-       &#39;NAME_HOUSING_TYPE&#39;, &#39;NAME_FAMILY_STATUS&#39;, &#39;NAME_EDUCATION_TYPE&#39;,
-       &#39;NAME_INCOME_TYPE&#39;],
-      dtype=&#39;object&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DAYS_EMPLOYED&#39;</span><span class="p">,</span> <span class="s1">&#39;AMT_INCOME_TOTAL&#39;</span><span class="p">,</span><span class="s1">&#39;AMT_CREDIT&#39;</span><span class="p">,</span><span class="s1">&#39;AMT_ANNUITY&#39;</span><span class="p">,</span><span class="s1">&#39;DAYS_ID_PUBLISH&#39;</span><span class="p">,</span> <span class="s1">&#39;DAYS_REGISTRATION&#39;</span><span class="p">]</span>
 <span class="n">pt</span><span class="o">.</span><span class="n">feature_plot</span><span class="p">(</span><span class="n">features</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -759,7 +714,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_16_0.png" src="_images/main_16_0.png" />
+<img alt="_images/main_15_0.png" src="_images/main_15_0.png" />
 </div>
 </div>
 <p>While some of the distributions look reasonable, we also observe that there are obviously some strange outliers, for example in the case of days employed, there is a single point who is employed for 350000+ days, and in the AMT_TOTAL_INCOME plot, we also see a client with 100 million in income! This plot is for our initial exploratory purpose only and it perfectly illustrates one important characteristic of our dataset which is that there are errors/extreme individuals, and they might require a closer examination if we plan to use them in further analysis.</p>
@@ -770,20 +725,18 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Next, we then proceed to looking at the general picture of what is the proportion of people using credit cards who are able to pay on time vs those who failed to pay on time(“TARGET” column).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;TARGET&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;TARGET&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">estimator</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Default&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">% o</span><span class="s2">f customers&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of TARGET Variable(0 for non-default, 1 for default)&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">target_plot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;proportion of people who paid on time:&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TARGET&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;proportion of people who failed to pay on time:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;TARGET&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_20_0.png" src="_images/main_20_0.png" />
+<img alt="_images/main_19_0.png" src="_images/main_19_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>proportion of people who paid on time: 0.9192711805431351
 proportion of people who failed to pay on time: 0.08072881945686496
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 432x288 with 0 Axes&gt;
 </pre></div>
 </div>
 </div>
@@ -806,7 +759,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_24_0.png" src="_images/main_24_0.png" />
+<img alt="_images/main_23_0.png" src="_images/main_23_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -818,21 +771,13 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <p>To further investigate the relationship between default risk and gender, we will manually divide income into 5 groups by percentile ranking and see how gender and default rate varies between these different income groups:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># binning AMT_INCOME_TOTAL column based on quantiles</span>
-<span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;VERY LOW&#39;</span><span class="p">,</span><span class="s1">&#39;LOW&#39;</span><span class="p">,</span><span class="s1">&#39;MEDIUM&#39;</span><span class="p">,</span><span class="s1">&#39;HIGH&#39;</span><span class="p">,</span><span class="s1">&#39;VERY HIGH&#39;</span><span class="p">]</span>
-<span class="n">gender_df</span><span class="p">[</span><span class="s1">&#39;AMT_INCOME_Quantile&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">gender_df</span><span class="o">.</span><span class="n">AMT_INCOME_TOTAL</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="n">order</span><span class="p">)</span>
-<span class="n">df_one</span> <span class="o">=</span> <span class="n">gender_df</span><span class="p">[</span><span class="n">gender_df</span><span class="p">[</span><span class="s1">&#39;TARGET&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span><span class="n">x</span><span class="o">=</span> <span class="n">df_one</span><span class="p">[</span><span class="s1">&#39;AMT_INCOME_Quantile&#39;</span><span class="p">],</span><span class="n">hue</span> <span class="o">=</span> <span class="n">df_one</span><span class="p">[</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">],</span><span class="n">discrete</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Income Quantile&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Count of Defaults of F/M in Different Income Groups&quot;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">gender_income_plot</span><span class="p">(</span><span class="n">gender_df</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_28_0.png" src="_images/main_28_0.png" />
+<img alt="_images/main_27_0.png" src="_images/main_27_0.png" />
 </div>
 </div>
 <p>This might be surprising, but we observe that females have an overall higher count of defaults, and in the occasions where males have a higher default count in the higher income groups, they only “win” by a slight amount. This is opposite to what we observed in the previous section, where males were observed to have a slightly higher proportion of defaults compared to female. The reason is that, if you remembered, there are almost <strong>double the amount of female entries vs male entries</strong> in our original dataset!</p>
@@ -845,7 +790,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_31_0.png" src="_images/main_31_0.png" />
+<img alt="_images/main_30_0.png" src="_images/main_30_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -864,7 +809,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_34_0.png" src="_images/main_34_0.png" />
+<img alt="_images/main_33_0.png" src="_images/main_33_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -882,7 +827,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_37_0.png" src="_images/main_37_0.png" />
+<img alt="_images/main_36_0.png" src="_images/main_36_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -900,7 +845,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_40_0.png" src="_images/main_40_0.png" />
+<img alt="_images/main_39_0.png" src="_images/main_39_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -918,7 +863,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_43_0.png" src="_images/main_43_0.png" />
+<img alt="_images/main_42_0.png" src="_images/main_42_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -936,7 +881,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_46_0.png" src="_images/main_46_0.png" />
+<img alt="_images/main_45_0.png" src="_images/main_45_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -954,7 +899,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_49_0.png" src="_images/main_49_0.png" />
+<img alt="_images/main_48_0.png" src="_images/main_48_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -972,25 +917,25 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_52_0.png" src="_images/main_52_0.png" />
+<img alt="_images/main_51_0.png" src="_images/main_51_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
 <ul class="simple">
 <li><p>With the increase in the number of family numbers, we also see a slight upward trend in default proportion.</p></li>
 </ul>
-<div class="section" id="data-takeaways">
-<h4>Data Takeaways<a class="headerlink" href="#data-takeaways" title="Permalink to this headline">¶</a></h4>
-<p>The plots above give a clear picture about the type of people within the data. The majority of people are working, female, own a home, are living in a home/apartment, and have 0 surrounding 30DPD defaults. It can also be seen that the max education for the majority of people in the data is a secondary education, which in the USA, refers to completing high school. It is interesting to see just how many people in the data own an apartment or house as it is significantly higher than for example the number of people renting. With that said, the data population really is not representative of the overall population as a whole.</p>
 <p>*Note that we did remove the extreme outliers on the right end for the above two discrete data plotting in order to achieve better visualization clarity, and future work might include more detailed analysis on the outliers.</p>
 </div>
+<div class="section" id="some-data-takeaways">
+<h3>Some Data Takeaways<a class="headerlink" href="#some-data-takeaways" title="Permalink to this headline">¶</a></h3>
+<p>The plots above give a clear picture about the type of people within the data. The majority of people are working, female, own a home, are living in a home/apartment, and have 0 surrounding 30DPD defaults. It can also be seen that the max education for the majority of people in the data is a secondary education, which in the USA, refers to completing high school. It is interesting to see just how many people in the data own an apartment or house as it is significantly higher than for example the number of people renting. With that said, the data population really is not representative of the overall population as a whole.</p>
 </div>
 </div>
 <div class="section" id="logistic-regression-model">
 <h2>Logistic Regression Model<a class="headerlink" href="#logistic-regression-model" title="Permalink to this headline">¶</a></h2>
 <p>The modeling section focuses on building a logistic regression model to try and predict whether someone will default on a loan or not given particular parameters from the data. As seens in the previous section, there is significant class imbalance where the vast majority of people in the data do not default on their loan. Thus metrics such as recall and precision are more important tools to determine the validity of our model compared to accuracy.</p>
-<div class="section" id="data-processing">
-<h3>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="feature-selection-and-modeling">
+<h3>Feature Selection and Modeling<a class="headerlink" href="#feature-selection-and-modeling" title="Permalink to this headline">¶</a></h3>
 <p>Here we pick our features and also create dummy variables for the categorical features.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1029,7 +974,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 train_recall = 0.7483 vs test_recall = 0.7545271629778671
 </pre></div>
 </div>
-<img alt="_images/main_62_1.png" src="_images/main_62_1.png" />
+<img alt="_images/main_61_1.png" src="_images/main_61_1.png" />
 </div>
 </div>
 </div>
