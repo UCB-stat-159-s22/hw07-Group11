@@ -481,184 +481,17 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/application_data.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># original_df = pd.read_csv(&#39;data/application_data.csv&#39;)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># original_df.head()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>SK_ID_CURR</th>
-      <th>TARGET</th>
-      <th>NAME_CONTRACT_TYPE</th>
-      <th>CODE_GENDER</th>
-      <th>FLAG_OWN_CAR</th>
-      <th>FLAG_OWN_REALTY</th>
-      <th>CNT_CHILDREN</th>
-      <th>AMT_INCOME_TOTAL</th>
-      <th>AMT_CREDIT</th>
-      <th>AMT_ANNUITY</th>
-      <th>...</th>
-      <th>FLAG_DOCUMENT_18</th>
-      <th>FLAG_DOCUMENT_19</th>
-      <th>FLAG_DOCUMENT_20</th>
-      <th>FLAG_DOCUMENT_21</th>
-      <th>AMT_REQ_CREDIT_BUREAU_HOUR</th>
-      <th>AMT_REQ_CREDIT_BUREAU_DAY</th>
-      <th>AMT_REQ_CREDIT_BUREAU_WEEK</th>
-      <th>AMT_REQ_CREDIT_BUREAU_MON</th>
-      <th>AMT_REQ_CREDIT_BUREAU_QRT</th>
-      <th>AMT_REQ_CREDIT_BUREAU_YEAR</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>100002</td>
-      <td>1</td>
-      <td>Cash loans</td>
-      <td>M</td>
-      <td>N</td>
-      <td>Y</td>
-      <td>0</td>
-      <td>202500.0</td>
-      <td>406597.5</td>
-      <td>24700.5</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>100003</td>
-      <td>0</td>
-      <td>Cash loans</td>
-      <td>F</td>
-      <td>N</td>
-      <td>N</td>
-      <td>0</td>
-      <td>270000.0</td>
-      <td>1293502.5</td>
-      <td>35698.5</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>100004</td>
-      <td>0</td>
-      <td>Revolving loans</td>
-      <td>M</td>
-      <td>Y</td>
-      <td>Y</td>
-      <td>0</td>
-      <td>67500.0</td>
-      <td>135000.0</td>
-      <td>6750.0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>100006</td>
-      <td>0</td>
-      <td>Cash loans</td>
-      <td>F</td>
-      <td>N</td>
-      <td>Y</td>
-      <td>0</td>
-      <td>135000.0</td>
-      <td>312682.5</td>
-      <td>29686.5</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>100007</td>
-      <td>0</td>
-      <td>Cash loans</td>
-      <td>M</td>
-      <td>N</td>
-      <td>Y</td>
-      <td>0</td>
-      <td>121500.0</td>
-      <td>513000.0</td>
-      <td>21865.5</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 122 columns</p>
-</div></div></div>
 </div>
 <div class="section" id="data-cleaning">
 <h2>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">¶</a></h2>
@@ -695,6 +528,14 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drop columns with more then 50% missing values + additional ones decided by the group</span>
 <span class="n">drop_col</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SK_ID_CURR&#39;</span><span class="p">,]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">original_df</span><span class="p">[</span><span class="n">sorted_null</span><span class="o">.</span><span class="n">index</span><span class="p">[(</span><span class="n">sorted_null</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="p">)]]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_col</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_feather</span><span class="p">(</span><span class="s2">&quot;data/serialized.fth&quot;</span><span class="p">)</span>
+<span class="c1"># pd.read_feather(&quot;processed_data.fth&quot;) to read serialized dataframe</span>
 </pre></div>
 </div>
 </div>
@@ -760,7 +601,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_15_0.png" src="_images/main_15_0.png" />
+<img alt="_images/main_16_0.png" src="_images/main_16_0.png" />
 </div>
 </div>
 <p>While some of the distributions look reasonable, we also observe that there are obviously some strange outliers, for example in the case of days employed, there is a single point who is employed for 350000+ days, and in the AMT_TOTAL_INCOME plot, we also see a client with 100 million in income! This plot is for our initial exploratory purpose only and it perfectly illustrates one important characteristic of our dataset which is that there are errors/extreme individuals, and they might require a closer examination if we plan to use them in further analysis.</p>
@@ -782,7 +623,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_19_0.png" src="_images/main_19_0.png" />
+<img alt="_images/main_20_0.png" src="_images/main_20_0.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>proportion of people who paid on time: 0.9192711805431351
 proportion of people who failed to pay on time: 0.08072881945686496
 </pre></div>
@@ -806,7 +647,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_23_0.png" src="_images/main_23_0.png" />
+<img alt="_images/main_24_0.png" src="_images/main_24_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -831,7 +672,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_27_0.png" src="_images/main_27_0.png" />
+<img alt="_images/main_28_0.png" src="_images/main_28_0.png" />
 </div>
 </div>
 <p>This might be surprising, but we observe that females have an overall higher count of defaults, and in the occasions where males have a higher default count in the higher income groups, they only “win” by a slight amount. This is opposite to what we observed in the previous section, where males were observed to have a slightly higher proportion of defaults compared to female. The reason is that, if you remembered, there are almost <strong>double the amount of female entries vs male entries</strong> in our original dataset!</p>
@@ -843,7 +684,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_30_0.png" src="_images/main_30_0.png" />
+<img alt="_images/main_31_0.png" src="_images/main_31_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -861,7 +702,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_33_0.png" src="_images/main_33_0.png" />
+<img alt="_images/main_34_0.png" src="_images/main_34_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -878,7 +719,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_36_0.png" src="_images/main_36_0.png" />
+<img alt="_images/main_37_0.png" src="_images/main_37_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -895,7 +736,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_39_0.png" src="_images/main_39_0.png" />
+<img alt="_images/main_40_0.png" src="_images/main_40_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -912,7 +753,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_42_0.png" src="_images/main_42_0.png" />
+<img alt="_images/main_43_0.png" src="_images/main_43_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -929,7 +770,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_45_0.png" src="_images/main_45_0.png" />
+<img alt="_images/main_46_0.png" src="_images/main_46_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -946,7 +787,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_48_0.png" src="_images/main_48_0.png" />
+<img alt="_images/main_49_0.png" src="_images/main_49_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -963,7 +804,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_51_0.png" src="_images/main_51_0.png" />
+<img alt="_images/main_52_0.png" src="_images/main_52_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -1000,6 +841,9 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># preprocessing gender and flag_own_car </span>
 <span class="n">categorical_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span> <span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">]</span>
 <span class="n">processed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">SelectedCol</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">categorical_cols</span><span class="p">)</span>
+<span class="c1"># saving dataframes</span>
+<span class="n">processed</span><span class="o">.</span><span class="n">to_feather</span><span class="p">(</span><span class="s2">&quot;processed_data.fth&quot;</span><span class="p">)</span>
+<span class="c1"># pd.read_feather(&quot;processed_data.fth&quot;) to read serialized dataframe</span>
 </pre></div>
 </div>
 </div>
@@ -1015,7 +859,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 train_recall = 0.7483 vs test_recall = 0.7545271629778671
 </pre></div>
 </div>
-<img alt="_images/main_61_1.png" src="_images/main_61_1.png" />
+<img alt="_images/main_62_1.png" src="_images/main_62_1.png" />
 </div>
 </div>
 </div>
