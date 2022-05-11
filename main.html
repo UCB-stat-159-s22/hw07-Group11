@@ -470,8 +470,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
-
-
 <span class="kn">import</span> <span class="nn">hw7_tools.plot_tools</span> <span class="k">as</span> <span class="nn">pt</span>
 
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
@@ -492,9 +490,6 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sorted_null = original_df.isnull().mean().sort_values(ascending=False)</span>
-
-<span class="c1">## serialize</span>
-
 <span class="c1"># a = np.array(list(sorted_null.index[(sorted_null&gt;0.5)]))</span>
 <span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;null_index.npy&#39;</span>
 <span class="c1"># np.save(fname, a)</span>
@@ -758,11 +753,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DAYS_EMPLOYED&#39;</span><span class="p">,</span> <span class="s1">&#39;AMT_INCOME_TOTAL&#39;</span><span class="p">,</span><span class="s1">&#39;AMT_CREDIT&#39;</span><span class="p">,</span><span class="s1">&#39;AMT_ANNUITY&#39;</span><span class="p">,</span><span class="s1">&#39;DAYS_ID_PUBLISH&#39;</span><span class="p">,</span> <span class="s1">&#39;DAYS_REGISTRATION&#39;</span><span class="p">]</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">features</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">)</span>
+<span class="n">pt</span><span class="o">.</span><span class="n">feature_plot</span><span class="p">(</span><span class="n">features</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1017,10 +1008,11 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># preprocessing gender and flag_own_car </span>
 <span class="n">categorical_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span> <span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">]</span>
-<span class="n">processed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">SelectedCol</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">categorical_cols</span><span class="p">)</span>
+<span class="c1"># processed = pd.get_dummies(df[SelectedCol], columns = categorical_cols)</span>
+
 <span class="c1"># saving dataframes</span>
-<span class="n">processed</span><span class="o">.</span><span class="n">to_feather</span><span class="p">(</span><span class="s2">&quot;data/processed_for_logistic_reg.fth&quot;</span><span class="p">)</span>
-<span class="c1"># pd.read_feather(&quot;data/processed_for_logistic_reg.fth&quot;) to read serialized dataframe</span>
+<span class="c1"># processed.to_feather(&quot;data/processed_for_logistic_reg.fth&quot;)</span>
+<span class="n">processed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;data/processed_for_logistic_reg.fth&quot;</span><span class="p">)</span> <span class="c1"># to read serialized dataframe</span>
 </pre></div>
 </div>
 </div>

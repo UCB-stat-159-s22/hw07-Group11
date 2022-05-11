@@ -194,6 +194,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#credit-account-default-status-and-characteristics">
    Credit Account Default Status and Characteristics
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-helpful-commands">
+     Some helpful commands:
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -224,6 +231,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#credit-account-default-status-and-characteristics">
    Credit Account Default Status and Characteristics
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-helpful-commands">
+     Some helpful commands:
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -240,12 +254,20 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="credit-account-default-status-and-characteristics">
 <h1>Credit Account Default Status and Characteristics<a class="headerlink" href="#credit-account-default-status-and-characteristics" title="Permalink to this headline">¶</a></h1>
 <p><strong><a class="reference external" href="https://mybinder.org/v2/gh/UCB-stat-159-s22/hw07-Group11/HEAD?labpath=main.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></strong></p>
-<p>Note that Binder runs and generates the each plot inside the output folder, but does not generate the packages-related plots within the notebook. This can be solved by setting up and running the notebook locally, but you can still check each plot in the output folder.</p>
-<p><strong>Note:</strong> This repository is public. The <a class="reference external" href="https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=columns_description.csv">Credit Card Fraud Detection Dataset</a> is from Kaggle. The EDA and Logistic Regression model were developed by Joe, Isaac, and Uma as a homework assignment for the <a class="reference external" href="https://ucb-stat-159-s22.github.io">Spring 2022 installment of UC Berkeley’s Stat 159/259 course, _Reproducible and Collaborative Data Science</a>.</p>
-<p>To install the packages:
-pip install .</p>
-<p>To test the packages:
-pytest hw7_tools</p>
+<p><strong>Note:</strong> This repository is public. The <a class="reference external" href="https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=columns_description.csv">Credit Card Fraud Detection Dataset</a> is from Kaggle. The EDA and Logistic Regression Model were developed by Joe, Isaac, and Uma as a homework assignment for the <a class="reference external" href="https://ucb-stat-159-s22.github.io">Spring 2022 installment of UC Berkeley’s Stat 159/259 course, _Reproducible and Collaborative Data Science</a>.</p>
+<div class="section" id="some-helpful-commands">
+<h2>Some helpful commands:<a class="headerlink" href="#some-helpful-commands" title="Permalink to this headline">¶</a></h2>
+<p>Install the packages:
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code> <em>or</em> <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">hw7_tools</span></code></p>
+<p>Test the packages:
+<code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">hw7_tools</span></code></p>
+<p>Generate the minimum required environment:
+<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">env</span></code></p>
+<p>Execute and generate outputs:
+<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">all</span></code></p>
+<p>Clean outputs:
+<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code></p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
