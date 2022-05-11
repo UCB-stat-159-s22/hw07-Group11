@@ -14,6 +14,8 @@ Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
+## Welcome to HW 7
+
 ## Credit Account Default Status and Characteristics
 
 **[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-s22/hw07-Group11/HEAD?labpath=main.ipynb)**
