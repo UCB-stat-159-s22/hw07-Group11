@@ -451,6 +451,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Credit Account Default Status and Characteristics<a class="headerlink" href="#credit-account-default-status-and-characteristics" title="Permalink to this headline">¶</a></h1>
 <p>Data source: <a class="reference external" href="https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=application_data.csv">https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=application_data.csv</a> (select all columns when downloading)</p>
 <p>Detailed data and columns description and also be found using this link, under Data and Data Explorer-columns_description.csv</p>
+<p>Credit history matters a lot when individuals want to take out loans … say more about this later</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
@@ -685,7 +686,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_11_0.png" src="_images/main_11_0.png" />
+<img alt="_images/main_12_0.png" src="_images/main_12_0.png" />
 </div>
 </div>
 <p>While some of the distributions look reasonable, we also observe that there are obviously some strange outliers, for example in the case of days employed, there is a single point who is employed for 350000+ days, and in the AMT_TOTAL_INCOME plot, we also see a client with 100 million in income! This plot is for our initial exploratory purpose only and it perfectly illustrates one important characteristic of our dataset which is that there are errors/extreme individuals, and they might require a closer examination if we plan to use them in further analysis.</p>
@@ -701,7 +702,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_15_0.png" src="_images/main_15_0.png" />
+<img alt="_images/main_16_0.png" src="_images/main_16_0.png" />
 </div>
 </div>
 <p>Notice that there the original data has a high class imbalance, so we might want to bear this fact in mind when performing logistic regression and considering the metrics to look at when evaluating classifiers later.</p>
@@ -719,7 +720,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_19_0.png" src="_images/main_19_0.png" />
+<img alt="_images/main_20_0.png" src="_images/main_20_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -736,7 +737,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_23_0.png" src="_images/main_23_0.png" />
+<img alt="_images/main_24_0.png" src="_images/main_24_0.png" />
 </div>
 </div>
 <p>This might be surprising, but we observe that females have an overall higher count of defaults, and in the occasions where males have a higher default count in the higher income groups, they only “win” by a slight amount. This is opposite to what we observed in the previous section, where males were observed to have a slightly higher proportion of defaults compared to female. The reason is that, if you remembered, there are almost <strong>double the amount of female entries vs male entries</strong> in our original dataset!</p>
@@ -748,7 +749,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_26_0.png" src="_images/main_26_0.png" />
+<img alt="_images/main_27_0.png" src="_images/main_27_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -766,7 +767,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_29_0.png" src="_images/main_29_0.png" />
+<img alt="_images/main_30_0.png" src="_images/main_30_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -783,7 +784,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_32_0.png" src="_images/main_32_0.png" />
+<img alt="_images/main_33_0.png" src="_images/main_33_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -800,7 +801,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_35_0.png" src="_images/main_35_0.png" />
+<img alt="_images/main_36_0.png" src="_images/main_36_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -817,7 +818,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_38_0.png" src="_images/main_38_0.png" />
+<img alt="_images/main_39_0.png" src="_images/main_39_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -834,7 +835,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_41_0.png" src="_images/main_41_0.png" />
+<img alt="_images/main_42_0.png" src="_images/main_42_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -851,7 +852,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_44_0.png" src="_images/main_44_0.png" />
+<img alt="_images/main_45_0.png" src="_images/main_45_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -868,7 +869,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_47_0.png" src="_images/main_47_0.png" />
+<img alt="_images/main_48_0.png" src="_images/main_48_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -904,7 +905,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_56_0.png" src="_images/main_56_0.png" />
+<img alt="_images/main_57_0.png" src="_images/main_57_0.png" />
 </div>
 </div>
 <p>train_precision = 0.5565637783562662 vs test_precision = 0.09927200529450694</p>
