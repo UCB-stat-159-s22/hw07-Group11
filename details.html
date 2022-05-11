@@ -53,7 +53,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to HW 7" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -92,9 +91,9 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="main.html">
    Credit Account Default Status and Characteristics
   </a>
  </li>
@@ -139,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/main.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/details.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -159,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmain.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdetails.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -180,7 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/main.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/details.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -451,28 +450,44 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Credit Account Default Status and Characteristics<a class="headerlink" href="#credit-account-default-status-and-characteristics" title="Permalink to this headline">¶</a></h1>
 <p>Data source: <a class="reference external" href="https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=application_data.csv">https://www.kaggle.com/datasets/mishra5001/credit-card?datasetId=263888&amp;select=application_data.csv</a> (select all columns when downloading)</p>
 <p>Detailed data and columns description and also be found using this link, under Data and Data Explorer-columns_description.csv</p>
+<p>Credit history matters a lot when individuals want to take out loans … say more about this later</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">import</span> <span class="nn">hw7_tools.plot_tools</span> <span class="k">as</span> <span class="nn">pt</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
 
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Important Note:</strong> Original data can be downloaded with the link provided above and our repo does not contain the original raw dataset due to its size(&gt;100mb) exceeding GitHub’s limit. Instead, we uploaded in our repo a slightly cleaned, serialized version of the data, but you can download the original dataset locally and check by uncommenting the code that we used to clean and serialize our data in <code class="docutils literal notranslate"><span class="pre">details.ipynb</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># original_df = pd.read_csv(&#39;data/application_data.csv&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Important Note:</strong> Original data can be downloaded with the link provided above and our repo does not contain the original raw dataset due to its size(&gt;100mb) exceeding GitHub’s limit. Instead, we uploaded in our repo a slightly cleaned, serialized version of the data, but you can download the original dataset locally and check by uncommenting the code that we used to clean and serialize our data.</p>
 <div class="section" id="data-cleaning-and-serialization">
 <h2>Data Cleaning and Serialization<a class="headerlink" href="#data-cleaning-and-serialization" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;null_index.npy&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sorted_null = original_df.isnull().mean().sort_values(ascending=False)</span>
+<span class="c1"># a = np.array(list(sorted_null.index[(sorted_null&gt;0.5)]))</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;null_index.npy&#39;</span>
+<span class="c1"># np.save(fname, a)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
@@ -498,7 +513,18 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We can check that all the above columns contain more than X%(50% in our case) of nulls values, and here we make one of our major assumptions in this EDA that these data are simply unknown and can introduce bias which can affect our analysis(as opposed to them being actually informative and showing something in our data). Future work might involve taking a deeper look into these columns, but for now, with this assumption in mind, we will drop these columns together with some additional columns like ID number, which we expect to be not useful in our analysis:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;data/serialized.fth&quot;</span><span class="p">)</span> <span class="c1"># read cleaned, serialized data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## drop columns with more then 50% missing values + additional ones decided by the group</span>
+<span class="c1"># drop_col = [&#39;SK_ID_CURR&#39;,]</span>
+<span class="c1"># df = original_df[sorted_null.index[(sorted_null&lt;0.5)]].drop(drop_col, axis=1)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## serialize</span>
+<span class="c1"># df.to_feather(&quot;data/serialized.fth&quot;)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;data/serialized.fth&quot;</span><span class="p">)</span> <span class="c1"># read cleaned, serialized data</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -680,12 +706,14 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Data Intuition<a class="headerlink" href="#data-intuition" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/feature_plot.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DAYS_EMPLOYED&#39;</span><span class="p">,</span> <span class="s1">&#39;AMT_INCOME_TOTAL&#39;</span><span class="p">,</span><span class="s1">&#39;AMT_CREDIT&#39;</span><span class="p">,</span><span class="s1">&#39;AMT_ANNUITY&#39;</span><span class="p">,</span><span class="s1">&#39;DAYS_ID_PUBLISH&#39;</span><span class="p">,</span> <span class="s1">&#39;DAYS_REGISTRATION&#39;</span><span class="p">]</span>
+<span class="n">pt</span><span class="o">.</span><span class="n">feature_plot</span><span class="p">(</span><span class="n">features</span><span class="p">,</span><span class="n">df</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_11_0.png" src="_images/main_11_0.png" />
+<img alt="_images/details_15_0.png" src="_images/details_15_0.png" />
 </div>
 </div>
 <p>While some of the distributions look reasonable, we also observe that there are obviously some strange outliers, for example in the case of days employed, there is a single point who is employed for 350000+ days, and in the AMT_TOTAL_INCOME plot, we also see a client with 100 million in income! This plot is for our initial exploratory purpose only and it perfectly illustrates one important characteristic of our dataset which is that there are errors/extreme individuals, and they might require a closer examination if we plan to use them in further analysis.</p>
@@ -696,12 +724,17 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Next, we then proceed to looking at the general picture of what is the proportion of people using credit cards who are able to pay on time vs those who failed to pay on time(“TARGET” column).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/target_plot.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">target_plot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_15_0.png" src="_images/main_15_0.png" />
+<img alt="_images/details_19_0.png" src="_images/details_19_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>proportion of people who paid on time: 0.9192711805431351
+proportion of people who failed to pay on time: 0.08072881945686496
+</pre></div>
+</div>
 </div>
 </div>
 <p>Notice that there the original data has a high class imbalance, so we might want to bear this fact in mind when performing logistic regression and considering the metrics to look at when evaluating classifiers later.</p>
@@ -714,12 +747,15 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Gender<a class="headerlink" href="#gender" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/Gender.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># omit the several XNA gender entries since we want to avoid assuming one&#39;s gender</span>
+<span class="n">gender_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">]</span><span class="o">!=</span> <span class="s1">&#39;XNA&#39;</span><span class="p">]</span>
+<span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span> <span class="n">gender_df</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_19_0.png" src="_images/main_19_0.png" />
+<img alt="_images/details_23_0.png" src="_images/details_23_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -731,24 +767,26 @@ const thebe_selector_output = ".output, .cell_output"
 <p>To further investigate the relationship between default risk and gender, we will manually divide income into 5 groups by percentile ranking and see how gender and default rate varies between these different income groups:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/gender_income_plot.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">gender_income_plot</span><span class="p">(</span><span class="n">gender_df</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_23_0.png" src="_images/main_23_0.png" />
+<img alt="_images/details_27_0.png" src="_images/details_27_0.png" />
 </div>
 </div>
 <p>This might be surprising, but we observe that females have an overall higher count of defaults, and in the occasions where males have a higher default count in the higher income groups, they only “win” by a slight amount. This is opposite to what we observed in the previous section, where males were observed to have a slightly higher proportion of defaults compared to female. The reason is that, if you remembered, there are almost <strong>double the amount of female entries vs male entries</strong> in our original dataset!</p>
 <p>Given the class imbalance in gender, we created a plotting function that generates the proportion of defaults of each gender, accounted for the different total counts in gender, and now this new proportion plot give a much more accurate depiction of our actual data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/balanced_plot.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">balanced</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">balanced_plot</span><span class="p">(</span><span class="n">gender_df</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_26_0.png" src="_images/main_26_0.png" />
+<img alt="_images/details_30_0.png" src="_images/details_30_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -761,12 +799,13 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Loan Type<a class="headerlink" href="#loan-type" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/Loan.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Loan&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_29_0.png" src="_images/main_29_0.png" />
+<img alt="_images/details_33_0.png" src="_images/details_33_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -778,12 +817,13 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Income Type<a class="headerlink" href="#income-type" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/Income Type.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Income Type&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_32_0.png" src="_images/main_32_0.png" />
+<img alt="_images/details_36_0.png" src="_images/details_36_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -795,12 +835,13 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Education Type<a class="headerlink" href="#education-type" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/Education.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Education&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_35_0.png" src="_images/main_35_0.png" />
+<img alt="_images/details_39_0.png" src="_images/details_39_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -812,12 +853,13 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>House Ownership<a class="headerlink" href="#house-ownership" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/House Ownership.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;House Ownership&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_38_0.png" src="_images/main_38_0.png" />
+<img alt="_images/details_42_0.png" src="_images/details_42_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -829,12 +871,13 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>House Type<a class="headerlink" href="#house-type" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/House Type.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_HOUSING_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;House Type&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_41_0.png" src="_images/main_41_0.png" />
+<img alt="_images/details_45_0.png" src="_images/details_45_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -846,12 +889,13 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Number of Surrounding 30DPD Defaults<a class="headerlink" href="#number-of-surrounding-30dpd-defaults" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/Number of Surrounding 30DPD Defaults.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_numerical_discrete_group</span><span class="p">(</span><span class="s1">&#39;OBS_30_CNT_SOCIAL_CIRCLE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Number of Surrounding 30DPD Defaults&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_44_0.png" src="_images/main_44_0.png" />
+<img alt="_images/details_48_0.png" src="_images/details_48_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -863,12 +907,13 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Number of Family Members<a class="headerlink" href="#number-of-family-members" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/Number of Family Members.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_numerical_discrete_group</span><span class="p">(</span><span class="s1">&#39;CNT_FAM_MEMBERS&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Number of Family Members&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_47_0.png" src="_images/main_47_0.png" />
+<img alt="_images/details_51_0.png" src="_images/details_51_0.png" />
 </div>
 </div>
 <p><strong>Observations:</strong></p>
@@ -890,7 +935,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Here we pick our features and also create dummy variables for the categorical features.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SelectedCol</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;TARGET&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">,</span><span class="s1">&#39;OBS_30_CNT_SOCIAL_CIRCLE&#39;</span><span class="p">,</span><span class="s1">&#39;CNT_FAM_MEMBERS&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">]</span>
+<span class="n">Features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span>
                    <span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">,</span><span class="s1">&#39;OBS_30_CNT_SOCIAL_CIRCLE&#39;</span><span class="p">,</span><span class="s1">&#39;CNT_FAM_MEMBERS&#39;</span><span class="p">,</span>
                   <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">]</span>
 </pre></div>
@@ -899,16 +947,32 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;output/reg_matrix.png&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># preprocessing gender and flag_own_car </span>
+<span class="n">categorical_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span> <span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">,</span><span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">]</span>
+<span class="c1"># processed = pd.get_dummies(df[SelectedCol], columns = categorical_cols)</span>
+
+<span class="c1"># saving dataframes</span>
+<span class="c1"># processed.to_feather(&quot;data/processed_for_logistic_reg.fth&quot;)</span>
+<span class="n">processed</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;data/processed_for_logistic_reg.fth&quot;</span><span class="p">)</span> <span class="c1"># to read serialized dataframe</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coefficients</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">logistic_reg</span><span class="p">(</span><span class="n">processed</span><span class="p">,</span><span class="mf">0.55</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/main_56_0.png" src="_images/main_56_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>train_precision = 0.5565637783562662 vs test_precision = 0.09927200529450694
+train_recall = 0.7483 vs test_recall = 0.7545271629778671
+</pre></div>
+</div>
+<img alt="_images/details_61_1.png" src="_images/details_61_1.png" />
 </div>
 </div>
-<p>train_precision = 0.5565637783562662 vs test_precision = 0.09927200529450694</p>
-<p>train_recall = 0.7483 vs test_recall = 0.7545271629778671</p>
 </div>
 <div class="section" id="results">
 <h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
@@ -916,7 +980,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p>We can also take a look at the coefficients and have an idea of which features contributes the most to predicting default risk:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;output/coef.fth&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coef</span> <span class="o">=</span> <span class="n">coefficients</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;coeff&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">coef</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">to_feather</span><span class="p">(</span><span class="s2">&quot;output/coef.fth&quot;</span><span class="p">)</span>
+
+<span class="n">coef</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_feather</span><span class="p">(</span><span class="s2">&quot;output/coef.fth&quot;</span><span class="p">)</span>
+<span class="n">coef</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1019,14 +1087,7 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to HW 7</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>

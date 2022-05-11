@@ -24,3 +24,7 @@ Execute and generate outputs:
 
 Clean outputs:
 ``make clean``
+
+### Some helpful tips:
+
+After ``make clean``, rerun details.ipynb or ``make all`` to regenerate the data and outputs needed for main.ipynb
