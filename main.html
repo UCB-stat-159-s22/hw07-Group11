@@ -810,6 +810,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># omit the several XNA gender entries since we want to avoid assuming one&#39;s gender</span>
 <span class="n">gender_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">]</span><span class="o">!=</span> <span class="s1">&#39;XNA&#39;</span><span class="p">]</span>
 <span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span> <span class="n">gender_df</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -835,6 +836,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span><span class="n">x</span><span class="o">=</span> <span class="n">df_one</span><span class="p">[</span><span class="s1">&#39;AMT_INCOME_Quantile&#39;</span><span class="p">],</span><span class="n">hue</span> <span class="o">=</span> <span class="n">df_one</span><span class="p">[</span><span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">],</span><span class="n">discrete</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Income Quantile&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Count of Defaults of F/M in Different Income Groups&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -847,6 +849,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">balanced</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">balanced_plot</span><span class="p">(</span><span class="n">gender_df</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -865,6 +868,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Loan&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -882,6 +886,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Income Type&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -899,6 +904,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Education&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -916,6 +922,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;House Ownership&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -933,6 +940,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_category_group</span><span class="p">(</span><span class="s1">&#39;NAME_HOUSING_TYPE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;House Type&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -950,6 +958,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_numerical_discrete_group</span><span class="p">(</span><span class="s1">&#39;OBS_30_CNT_SOCIAL_CIRCLE&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Number of Surrounding 30DPD Defaults&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -967,6 +976,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pt</span><span class="o">.</span><span class="n">plot_default_in_numerical_discrete_group</span><span class="p">(</span><span class="s1">&#39;CNT_FAM_MEMBERS&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="s1">&#39;Number of Family Members&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1018,6 +1028,7 @@ proportion of people who failed to pay on time: 0.08072881945686496
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coefficients</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">logistic_reg</span><span class="p">(</span><span class="n">processed</span><span class="p">,</span><span class="mf">0.55</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
